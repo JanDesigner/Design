@@ -2,15 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #343434;
+
 }
 body {
-    margin: 0px 50px;
+
+}
+header , main {
+    background-color: #343434;
 }
 header {
-    padding: 20px 0;
+    padding: 20px 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 
 
@@ -24,6 +27,16 @@ header ul {
     display: flex;
     list-style-type: none;
     align-items: center;
+
+
+}
+
+.uncharted {
+    margin: 50px;
+    font-size: 50px;
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    font-weight: 200;
 
 
 }
@@ -48,6 +61,8 @@ header ul li a {
     height: 5px;
     background-color: #fff;
     margin: 5px;
+    transition: all .5s;
+
 }
 .burger {
     display: flex;
@@ -55,6 +70,7 @@ header ul li a {
     display: none;
 }
 main {
+    padding: 0 50px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -83,12 +99,59 @@ main {
 .sellerContent .btn:hover {
     cursor: pointer;
 }
+.mContet {
+    display: none;
+}
+
+.gridLayout {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    padding: 20px 50px;
+
+
+
+}
+.gridLayout img {
+    width: 100%;
+}
+
+.sectionBlog {
+
+        position:relative;
+        overflow: hidden;
+        max-height: 400px;
+
+
+}
+.sectionContent{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    background:rgba( 0,0,0,0.4);
+    color:white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border:1px solid white;
+    margin: 5px 0;
+}
+
+
 
 @media screen and (max-width : 768px){
 
     body {
-
+        overflow: hidden;
     }
+
 
     header .logo {
        min-width: 60%;
@@ -102,9 +165,34 @@ main {
     }
 
     header ul {
-        display:  none;
+        position: absolute;
+        right: 0px;
+        top: 11vh;
+        height: 80%;
+        background-color: white;
+        opacity: 0;
+        color:black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transform: translateX(100%);
+        transition: all 1s ;
+        width:50%;
+
+
+    }
+    header ul li {
+        padding: 10px;
+        background-color: white;
+
+    }
+    header ul li a {
+        color: black;
+        background-color: white;
+
     }
     .burger {
+
         display: block;
 
     }
@@ -123,5 +211,32 @@ main {
     main p {
         text-align: left;
     }
+
+    .burger:hover {
+        cursor: pointer;
+    }
+    .nav-active {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg)translate(0px,10px);
+        transition: all .5s;
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+    .toggle .line3 {
+            transform: rotate(45deg) translate(-5px,-14px);
+        transition: all .5s;
+    }
+
+    .gridLayout {
+        display: grid;
+        grid-template-columns: repeat(1,1fr     );
+    }
+
 
 }
