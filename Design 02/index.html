@@ -12,7 +12,7 @@
         <nav>
             <img src = "img/logo.png" class = "logo">
         </nav>
-        <ul>
+        <ul class = "navSlider">
             <li><a href = "#">Services</a></li>
             <li><a href = "#">Product</a></li>
             <li><a href = "#">Location</a></li>
@@ -25,6 +25,8 @@
             <div class = "line3"></div>
         </div>
 
+
+
     </header>
 
     <main>
@@ -32,7 +34,6 @@
        <img src = "img/seller.jpg" class = "seller"/>
 
        <div class = "sellerContent">
-
            <h1>Service That Will Never Disappoint You</h1>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, cupiditate deserunt dolor dolores eligendi, eum fuga harum laboriosam laborum repellat reprehenderit repudiandae veniam veritatis voluptatem?</p>
            <p class = "btn">Read More</p>
@@ -40,7 +41,70 @@
 
     </main>
 
+        <h1 class = "uncharted">Services</h1>
 
+    <div class="gridLayout">
+
+        <div class="sectionBlog">
+
+            <img src = "img/img2.jpg">
+            <div class="sectionContent">
+                <h1> Vacation Promo</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, repellendus!</p>
+                <p class = "btn">Read More</p>
+            </div>
+        </div>
+        <div class="sectionBlog">
+
+            <img src = "img/img1.jpg">
+                <div class="sectionContent">
+                    <h1> Vacation Promo</h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, repellendus!</p>
+                    <p class = "btn">Read More</p>
+            </div>
+
+        </div>
+        <div class="sectionBlog">
+
+            <img src = "img/img3.jpg">
+                <div class="sectionContent">
+                    <h1> Vacation Promo</h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, repellendus!</p>
+                    <p class = "btn">Read More</p>
+                </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+<script>
+
+      const navSlider = ()  => {
+          const burger = document.querySelector('.burger');
+          const nav =  document.querySelector('.navSlider');
+
+          burger.addEventListener('click', () => {
+              nav.classList.toggle('nav-active');
+              burger.classList.toggle('toggle');
+          });
+
+
+      }
+
+      navSlider();
+
+
+</script>
 
 </body>
 </html>
