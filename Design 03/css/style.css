@@ -36,6 +36,35 @@ header img {
     grid-column: 3/4;
 }
 
+main {
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 250px;
+}
+
+main section img {
+    width:100%;
+    min-height: 100%;
+}
+main section {
+    grid-column: 1/-1;
+    position: relative;
+}
+main section div {
+   
+    text-align: justify;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+
+}
+main section div h1 {
+    font-size: 35px;
+}
+
+
 
 @media screen and ( max-width: 1000px){
 
@@ -50,8 +79,9 @@ header img {
     }
     .nav  {
         grid-column: 1/-1;
-
+     
     }
+    
 
 }
 @media screen and (max-width:500px){
@@ -59,5 +89,19 @@ header img {
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 50px 50px;
         align-items:center;
+    }
+    main section div { 
+
+        width: 250px;
+ 
+
+    }
+      
+    main section div h1 {
+            font-size: 35px;
+    }
+
+    main section div  p {
+          display: none;
     }
 }
