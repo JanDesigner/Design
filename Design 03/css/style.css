@@ -1,107 +1,175 @@
-*,html {
+* , html , body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
 }
-body {
-
-}
-
-ul a {
-    color: black;
-    text-decoration: none;
-}
-.nav ul {
-    list-style-type:none;
-    display:grid;
-    grid-template-columns: repeat(6,1fr);
-    align-self:center;
-    text-align:center;
-}
-
-
-.nav  {
-    display:grid;
-    grid-column: 6/12;
-
-}
-
-header {
-    margin: 40px;
+nav {
+    margin: 30px;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-
-}
-header img {
-    width:120px;
-    grid-column: 3/4;
-}
-
-main {
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 250px;
-}
-
-main section img {
-    width:100%;
-    min-height: 100%;
-}
-main section {
-    grid-column: 1/-1;
-    position: relative;
-}
-main section div {
-   
-    text-align: justify;
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 300px;
-
-}
-main section div h1 {
-    font-size: 35px;
-}
-
-
-
-@media screen and ( max-width: 1000px){
-
-    header {
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: 150px 150px;
+     grid-template-columns: repeat(2,1fr);
+     grid-template-rows: 100px;
+ 
     }
-    header img {
-        width:120px;
-        grid-column: 1/-1;
-        margin:auto;
-    }
-    .nav  {
-        grid-column: 1/-1;
-     
-    }
+
+nav ul {
+    grid-column: 2;
+    text-align: center;
     
-
+    align-self: center;
 }
-@media screen and (max-width:500px){
-    .nav ul {
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 50px 50px;
-        align-items:center;
-    }
-    main section div { 
+nav div {
+    text-align: center;
+    align-self: center;
+}
+ 
+ nav ul li {
+     display: inline-block;
+     padding: 5px;
+     
 
-        width: 250px;
+ }
+ nav ul li:hover {
+     cursor: pointer;
+ }
+
+ .burger {
+     display: grid;
+     align-self: center;
+     display: none;
+ 
+ }
+
+ .burger div {
+    
+    background-color: black;
+    width: 20px;
+    height: 5px;
+    margin: 2px;
  
 
+ }
+
+ /*  Main */
+
+    
+ main{
+     margin: 30px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows:repeat(3, 200px);
+     grid-gap: 10px;
+     
+
+ }
+ main div {
+     border: 1px solid black;
+     position: relative;
+ }
+ main .m2 {
+     grid-column: 2/-1;
+ }
+ main img {
+
+    width: 100%;
+    min-height: 200px;
+
+
+ }
+
+ main section {
+     text-align: center;
+     width: 100%;
+     position: absolute;
+     top: 50%;
+     left:0%;
+     transform: translate(-50% -50%);
+     background-color: white;
+
+ }
+
+
+
+
+
+ @media screen and (max-width:760px){
+    body {
+        position: relative;
+        overflow: hidden;
+
+
     }
-      
-    main section div h1 {
-            font-size: 35px;
+    nav {
+        margin: 0px;
+        display:grid;
+
+
+    }
+     nav ul {
+        background-color: black;
+        position: absolute;
+        right: 0;
+        top: 100px;
+        height: 500px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transform: translateX( 100%);
+        transition: transform  1s ease-in-out;
+    
+        font-weight: 400;
+        text-align: left;
+        justify-content: center;
+        text-align: center;
+        z-index: 9999;
+   
+       
+    }
+     nav ul li {
+         padding: 10px;
+         color:white;
+        
+
+     }
+     nav ul li:hover {
+        background-color: white;
+        color:black;
+        
+       
+
+    }
+     .burger {
+        display:inline-block;
+        grid-column: 2;
+        margin:auto;
+     }
+
+     .nav-active{
+        transform: translateX(0%);
+        z-index: 9999;
+
+
+     }
+
+     main{
+        grid-template-columns: repeat(2, 1fr);
+   
     }
 
-    main section div  p {
-          display: none;
+ }
+
+ @media screen and (max-width: 560px){
+    main{
+
+        grid-template-columns: repeat(1, 1fr);
     }
-}
+    main .m2 {
+        grid-column: 1/-1;
+    }
+
+ 
+
+ }
