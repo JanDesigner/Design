@@ -2,22 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
     font-family: 'Courier New', Courier, monospace;
+
 }
 nav {
     margin: 30px;
     display: grid;
      grid-template-columns: repeat(2,1fr);
      grid-template-rows: 100px;
+  
  
     }
 
 nav ul {
     grid-column: 2;
     text-align: center;
-    
+
     align-self: center;
+
 }
 nav div {
     text-align: center;
@@ -27,6 +29,7 @@ nav div {
  nav ul li {
      display: inline-block;
      padding: 5px;
+     
      
 
  }
@@ -55,10 +58,10 @@ nav div {
 
     
  main{
-     margin: 30px;
+     margin: 30 60px;
      display: grid;
      grid-template-columns: repeat(4, 1fr);
-     grid-template-rows:repeat(3, 200px);
+     grid-template-rows:repeat(2, 200px);
      grid-gap: 10px;
      
 
@@ -73,8 +76,7 @@ nav div {
  main img {
 
     width: 100%;
-    min-height: 200px;
-
+    height: 100%;
 
  }
 
@@ -88,6 +90,43 @@ nav div {
      background-color: white;
 
  }
+
+ .event {
+    width: 50%;
+    margin: 20px auto;
+    text-align: justify;
+
+ }
+ .clothes {
+    background-color: #264348;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 400px;
+    overflow: hidden;
+
+}
+.clothes section {
+    color:white;
+    justify-content: center;
+    align-self: center;
+    letter-spacing: 1.2px;
+    padding:10px;
+    text-align: left;
+}
+.clothes a {
+    padding: 10px 5px;
+    margin:10px;
+    color:#fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    display: inline-block;
+}
+.clothes img {
+    width: 100%;
+    overflow: hidden;
+
+}
 
 
 
@@ -156,18 +195,36 @@ nav div {
 
      main{
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:repeat(3, 200px);
    
     }
 
- }
+}
 
  @media screen and (max-width: 560px){
+    html {
+        overflow: hidden;
+    }
     main{
 
         grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:repeat(6, 200px);
+        margin: 10px;
     }
     main .m2 {
         grid-column: 1/-1;
+    }
+    .event {
+        width: 100%;
+        padding: 10px;
+     
+    }
+    .clothes img {
+        align-self: center;
+    }
+    .clothes  {
+        text-align: justify;
+        padding: 0;
     }
 
  
