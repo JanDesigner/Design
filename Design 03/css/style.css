@@ -300,6 +300,9 @@ nav div {
     .semiFooter {
         grid-template-rows: 200px;
     }
+    .s3 {
+        margin-top: 20px;
+    }
 
  
 
