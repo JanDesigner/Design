@@ -172,8 +172,18 @@ nav div {
  }
 
  footer {
-     height: 50%;
+    background-color: black;
+    color: #fff;
+    padding: 10 60px;
+    display: flex;
+
+    justify-content: center;
+
+
+    
+    
  }
+ 
 
 
 
