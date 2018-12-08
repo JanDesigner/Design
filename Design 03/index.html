@@ -18,7 +18,7 @@
             </div>
 
             <ul>
-                <li>Home</li>
+                <li class = "test">Home</li>
                 <li>About</li>
                 <li>Product</li>
                 <li>Price</li>
@@ -169,14 +169,22 @@
            const navSlide = () => {
                const burger = document.querySelector('.burger');
                const nav = document.querySelector('ul');
+               const li = document.querySelector('.test')
 
                 burger.addEventListener('click', () => {
                     nav.classList.toggle('nav-active');
-                })
+                    li.classList.add('opt1');
+                    
+                    
+                });
+
+
+      
 
            }
 
            navSlide();
+
 
  
 
