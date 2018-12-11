@@ -49,7 +49,7 @@ main {
     grid-gap: 10px;
 }
 main div {
-    border: 1px solid black;
+   
 
 
 }
@@ -85,6 +85,45 @@ main div {
 
 /* //////////////////////////////////////// MAIN GRID END */
 
+
+#one {
+    padding: 10px;
+}
+#one section {
+    text-indent: 10px;
+    text-align: justify;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    margin: 10px 0; 
+   
+}
+#two {
+  position: relative;
+
+  align-self: center;
+}
+#two img {
+    width:100%;
+
+    
+}
+#two span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    color:#fff;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;
+}
+#three {
+    background-image: url("../img/m2.png");
+    background-position: right;
+}
+
+
 /* ////////////////////////////////  768 pixel */
 @media screen and (max-width: 768px){
 
@@ -101,7 +140,18 @@ header nav ul {
 body {
     margin: 0px;
 }
-main { margin: 30px;}
+main {
+     margin: 30px;
+}
+
+#two img {
+    height: 100%;
+    width: 70%;
+}
+#two {
+    text-align: center;
+  
+}
 
 
 
@@ -111,6 +161,17 @@ main { margin: 30px;}
 /* ////////////////////////////////  768 pixel END */
 
 
+/* ////////////////////////////////  360 pixel */
+
+@media screen and (max-width: 360px){
+
+    #one {
+        overflow: scroll;
+    }
+
+}
+
+/* ////////////////////////////////  360 pixel END */
 
 
 
