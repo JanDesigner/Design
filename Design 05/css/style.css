@@ -12,11 +12,12 @@ nav {
     height: 100%;
     position: fixed;  
     display:grid;
+    top: 0;
     
 }
 nav ul {
     align-self:center;
- 
+    list-style-type: none; 
 }
 
 h3 {
@@ -56,6 +57,9 @@ main .others {
 
 main div {
         
+}
+.scaleThis {
+    width: 200px;
 }
 
 
